@@ -1,0 +1,49 @@
+ReactJS
+Firebase
+Finhub Trading API      // we get data from here for 'Stats' component
+
+> npx create-react-app robinhood-clone
+> npm start
+
+Cleanup
+
+To center items:
+    display: grid;
+    place-items: center;
+
+    OR
+
+    display: flex;
+    justify-content: center;
+
+For 'LineGraph' component use dependency 'react-chartjs-2'
+    > npm install --save react-chartjs-2 chart.js
+    chart.js            https://www.chartjs.org/docs/latest/
+    react-chartjs-2     https://www.npmjs.com/package/react-chartjs-2
+        See usage https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/components/line.js
+
+useState 
+    allows our functional components which used to be stateless become stateful. And 
+useEffect 
+    allows our functional components leverage the component lifecycle hooks which were, in the past, only supported for class components.
+    useEffect(() => {...}, []);  // [] means listen when the component is loaded.
+
+Finnhub Stock API    
+    https://finnhub.io/ -> Get free API key -> create account -> get key -> Stock Price: Quote https://finnhub.io/docs/api/quote
+
+    axios is a way to grab GET request
+    > npm install axios --save
+
+Firebase -> Firestore Database -> Create Database -> Start a Collection: 
+    Collection id: 'myStocks'
+    Auto-id
+    Field: 'ticker', value: APPL
+    Field: 'shares', value: 200
+
+    Create firebase.js
+        > npm i firebase
+    In Stats.js import db
+
+    Google Search for 'firestore collection find query' -> https://firebase.google.com/docs/firestore/query-data/queries -> e.g. var query = citiesRef.where("state", "==", "CA");
+    Google Search for 'firestore update record'
+    Google Search for 'firestore update key in element'
